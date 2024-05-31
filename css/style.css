@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+:root{
+    --main-bg-color: black;
+    --blue-dark: #35374B;
+    --blue-medium: #344955;
+    --blue-light: #50727B;
+    --green: #78A083;
+}
+/*
+https://www.colorhunt.co/palette/35374b34495550727b78a083
+#35374B
+#344955
+#50727B
+#78A083
+*/
+/* html {
+
+} */
+body{
+    background-color: var(--blue-dark);
+    color: white;
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* -------NAV------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #78A083;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #78A083;
+}
+
+.nav-link:hover{
+    color: #344955;
+    background: #78A083;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #78A083;
+}
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
+.header{
+    background-image: url(../img/vinil.jpg);
+    background-position: center center;
+    background-size: cover;
+    min-height: 50vh;
+    text-align: center;
+    padding: 1vh;
+    font-size: 5vh;
+}
+
+/* -- BUSCADOR -- */
+
+.box-0{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+form input {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    min-width: 300px;
+}
+.btn {
+    background-color: var(--green);
+    border: none;
+    color: whitesmoke;
+    padding: 12px 50px;
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 0.05px;
+    text-transform: uppercase;
+    min-height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.btn:hover{
+    background-color: var(--blue-light);
+}
+
+.result.box-0 {
+    margin-top: 20px;
+    font-size: 30px;
+}
+.full-lyrics,
+.result ul{
+    padding: 20px;
+}
+
+.result.box-0 ul li {
+    list-style: none;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--green);
+} 
+.result ul li img {
+    max-width: 120px;
+    float: left;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+.result ul li span {
+    background-color: var(--green);
+    border: none;
+    padding: 5px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 12px;
+    text-decoration: none;
+    margin-top: 5px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.result ul li span:hover{
+    background-color: #50727B;
+}
+
+
+/* // tendencias */
+.music-card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--green);
+    width: 430px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.card{
+    background-color: var(--green);
+    padding: 10px;
+    width: 350px;
+    height: 500px;
+    border-radius: 10px;
+}
+.song-img{
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+}
+.artist-img{
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+}
+#artist-text{
+    font-size: italic;
+}
+
+/* --CONTENIDO-- */
+
+.music{
+    padding: 1rem 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+h2{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+hr{
+    border: 1px solid var(--green);
+    width: 50%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.box-containter-1,
+.box-containter-2{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    gap: 40px;
+}
+.box-1,
+.box-2{
+    border-radius: 5px;
+    /* z-index: 1000; */
+    /* display: none; */
+}
+.box-1:nth-child(1),
+.box-1:nth-child(2){
+    display: inline-block;
+}
+.box-2:nth-child(1),
+.box-2:nth-child(2){
+    display: inline-block;
+}
+.content img {
+    width: 90%;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    border: 5px solid var(--blue-medium);
+}
+.content img:hover {
+    border: 5px solid var(--green);
+    box-shadow: var(--blue-medium) 0px 10px 100px;
+    cursor: pointer;
+}
+.content h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.content {
+    color: white;
+    font-size: 20px;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 100px 0;
+    margin-top: 100px;
+    border-top: 1px solid var(--green);
+}
+.footer ul{
+    display: flex;
+}
+.footer h3{
+    font-size: 30px;
+}
+.footer a {
+    color: white;
+    font-size: 20px;
+    margin-right: 20px;
+    display: block;
+}
+.footer a:hover{
+    color: var(--green);
+
+}
+
+@media (max-width:911px){
+    .menu{
+        padding: 20px;
+    }
+    .menu label{
+        display: initial;
+    }
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: black;
+        display: none;
+    }
+    .music {
+        padding: 30px 60px;
+    }
+    .content img {
+        width: 80%;
+        margin-bottom: 15px;
+        border-radius: 20px;
+        border: 5px solid var(--blue-medium);
+    }
+    .footer{
+        margin-top: 30px;
+        padding: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer ul {
+        margin-top: 15px;
+        justify-content: center;
+    }
+}
+

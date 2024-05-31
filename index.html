@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/syleforms.css">
+    <script src="https://kit.fontawesome.com/d743ce348f.js" crossorigin="anonymous"></script>
+    <title>Grupo 16 - iniciar-sesion</title>
+
+</head>
+<body class="body-inicio">
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo">{GRUPO#16} <i class="fa-solid fa-music"></i></a>
+        </nav>
+    </header>
+    <main  class="container">
+        <div  class="form-content">
+            <h1 id="title">INICIAR SESIÓN</h1>
+            <form>
+                <div class="input-group">
+                    
+                    <!-- <div class="input-field" id="nameInput">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Nombre">
+                    </div>
+                    <div class="input-field" id="apellidoInput">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Apellido">
+                    </div> -->
+                    <div class="input-field">
+                        <p> Usuario: admin@admin.com </p>
+                    </div> 
+                    <div class="input-field">
+                        <p> Contraseña: 1234</p>
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" name="mail" id='mail' placeholder="Email">
+                    </div>
+                    <div class="input-field">
+                        
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="pwd" id="pwd" placeholder="Contraseña">
+                    </div>
+                    <p>Olvistate tu Contraseña <a href="#">click aquí</a></p>
+                </div>
+                <div class="btn-field">
+                    <!-- <button id="signUp" type="button">Registro</button> -->
+                    <button type="button" onclick="validar()">Validar</button>       
+                </div>
+            </form> 
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
